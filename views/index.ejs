@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= name %> - Recipey</title>
+        <link href="../css/index.css" rel="stylesheet" type="text/css">
+        <script src="../js/handler.js"></script>
+        <style type="text/css" media="print">
+            .no-print { display: none; }
+         </style>         
+    </head>
+    <body onload="main()">
+        <div id="recipe" class="recipe">
+            <h1 id="name"><%= name %></h1>
+            <h3 id="author"> By: <%= author %> </h3>
+            <div id="content"> <%- data %></div>
+            <h4 id="date_created">Created on: <%= date.toLocaleDateString() %></h4>
+            <div class="sharing-options">
+                <a class="no-print" id="tweet_share"></a>
+                <a class="no-print" id="email_share"></a>
+                <a class="no-print" id="print"></a>
+            </div>
+        </div>
+
+
+
+    </body>
+    
+    
+</html>
